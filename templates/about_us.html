@@ -1,0 +1,145 @@
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $('nav').addClass('navbar-tranparent');
+        $('nav-link').css('color', '#fff');
+        $('.nav-link').css('color', '#fff');
+        $('nav').addClass('navbar-dark');
+
+    });
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+
+        if(scroll < 50){
+
+            $('nav').addClass('navbar-tranparent');
+            $('nav').removeClass('navbar-clean-white');
+            $('.nav-link').css('color', '#fff');
+            $('nav').addClass('navbar-dark');
+            $('nav').removeClass('navbar-light');
+
+
+        }else{
+
+            $('nav').removeClass('navbar-tranparent');
+            $('nav').addClass('navbar-clean-white');
+            $('.nav-link').css('color', 'rgba(0, 0, 0, 0.5)');
+            $('nav').removeClass('navbar-dark');
+            $('nav').addClass('navbar-light');
+
+        }
+    });
+
+    $('.navbar-toggler').click(function() {
+
+        if ($(window).width() < 992) {
+
+            $('nav').removeClass('navbar-tranparent');
+            $('nav').addClass('navbar-clean-white');
+            $('.nav-link').css('color', '#383d41d6');
+            $('nav').removeClass('navbar-dark');
+            $('nav').addClass('navbar-light')
+
+        }
+    });
+
+    if ($(window).width() < 992){
+        $('.mobile-portfolio').hide();
+    }
+    else{
+        $('.mobile-name-card').hide();
+    }
+
+</script>
+
+<div class="container-fluid about-us-cover" id="background-cover">
+    <div class="container text-white right-details">
+        <div class="row pl-4 pr-4">
+            <div class="col-md-12">
+                <h1 class="pt-4 pb-4 text-center">We are Goplannr</h1> 
+            </div>
+            <div class="col"></div>
+            <div class="col-md-8">
+                <p class="text-center lead">
+                Goplannr is a full stack insurance platform which helps intermediaries and enterprises reduce their distribution cost significantly.
+                </p>
+                <p class="text-center lead">
+                Our aim is to makes Insurance Simple, Smart and Personal with the help of Machine learning and local advisors.
+                </p>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper grey-background grey-border">
+    <div class="container">
+        <div class="row pl-4 pr-4">
+            <div class="col-md-12">
+                <h2 class="pt-4 pb-4 text-center">Team Members</h2> 
+            </div>
+            <div class="col-md-6">
+                <div class="my-3 p-3 bg-white rounded shadow-sm text-center">
+                    <h5 class="pt-4 pb-4 text-center">Pranshu Diwan (Co-founder, CEO)</h5>
+
+                    <img src="https://d1qb2nb5cznatu.cloudfront.net/users/5735723-large?1545206802" alt="..." class="img-thumbnail about-image"><br><br><br>
+
+                    <p class="pr-4 pl-4 text-left">Founding team member of a new health insurer (Aditya Birla Health Insurance). Headed Data Science, Non Traditional & Sales Digitization</p>
+                    <p class="pr-4 pl-4 text-left">Consultant, Essex Lake Group - direct mail acquisition channel for Insurer (METLIFE USA)</p>
+                    <p class="pr-4 pl-4 text-left">Marketing Strategy & Analytics for Credit Cards - HSBC USA, Capital One UK Cards</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="my-3 p-3 bg-white rounded shadow-sm text-center">
+                    <h5 class="pt-4 pb-4 text-center">Ruchir Kanakia (Co-founder)</h5>
+
+                    <img src="assets/images/ruchir.jpg" alt="..." class="img-thumbnail about-image"><br><br><br>
+
+                    <p class="pr-4 pl-4 text-left">Head Business Development at Cuemath. Responsible for doubling teacher network over the last one year. Led Cuemath's foray in Preschool.</p>
+                    <p class="pr-4 pl-4 text-left">Head Business Development & Operations at Instamojo. Responsible for the entire P&L & revenue growth of 100x over 3 years.</p>
+                    <p class="pr-4 pl-4 text-left">Head Supply at Exotel. Launched operations in 6 cities in India. Improved gross margins by reducing COGS to break even in 6 months and become profitable.</p>
+                    <p class="pr-4 pl-4 text-left">Financial Analyst at Tresvista. Built financial models for Franklin Templeton Middle East Fund (~ USD 100 million).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div class="container">
+
+        <h2 class="pt-4 pb-4 text-center">In the media</h2> 
+
+        <div class="row pt-2">
+            <div class="col-md-3">
+                <div class="my-3 p-3 bg-white rounded shadow-sm text-center">
+                    <img src="assets/images/mumbaifintech.jpeg" alt="Cinque Terre" style="width: 200px; height: 100px; object-fit: cover;
+                        -webkit-filter: grayscale(100%); 
+                        filter: grayscale(100%);">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="my-3 p-3 bg-white rounded shadow-sm text-center">
+                    <img src="assets/images/adityabirla.jpg" alt="Cinque Terre" style="width: 200px; height: 100px; object-fit: cover;-webkit-filter: grayscale(100%); 
+                        filter: grayscale(100%);">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="my-3 p-3 bg-white rounded shadow-sm text-center">
+                    <img src="assets/images/indianexpress.png" class="img-thumbnail" alt="Cinque Terre" style="width: 200px; /* You can set the dimensions to whatever you want */ height: 100px; object-fit: cover; -webkit-filter: grayscale(100%); 
+                        filter: grayscale(100%);">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="my-3 p-3 bg-white rounded shadow-sm text-center">
+                    <img src="assets/images/1000Startups.jpg" class="img-thumbnail" alt="Cinque Terre" style="width: 200px; height: 100px; object-fit: cover;
+                        -webkit-filter: grayscale(100%); 
+                        filter: grayscale(100%);">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

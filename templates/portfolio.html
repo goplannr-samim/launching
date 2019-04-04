@@ -1,0 +1,314 @@
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $('nav').addClass('navbar-tranparent');
+        $('nav-link').css('color', '#fff');
+        $('.nav-link').css('color', '#fff');
+        $('nav').addClass('navbar-dark');
+
+    });
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+
+        if(scroll < 50){
+
+            $('nav').addClass('navbar-tranparent');
+            $('nav').removeClass('navbar-clean-white');
+            $('.nav-link').css('color', '#fff');
+            $('nav').addClass('navbar-dark');
+            $('nav').removeClass('navbar-light');
+
+
+        }else{
+
+            $('nav').removeClass('navbar-tranparent');
+            $('nav').addClass('navbar-clean-white');
+            $('.nav-link').css('color', 'rgba(0, 0, 0, 0.5)');
+            $('nav').removeClass('navbar-dark');
+            $('nav').addClass('navbar-light');
+
+        }
+    });
+
+    $('.navbar-toggler').click(function() {
+
+        if ($(window).width() < 992) {
+
+            $('nav').removeClass('navbar-tranparent');
+            $('nav').addClass('navbar-clean-white');
+            $('.nav-link').css('color', '#383d41d6');
+            $('nav').removeClass('navbar-dark');
+            $('nav').addClass('navbar-light')
+
+        }
+    });
+
+    if ($(window).width() < 992){
+        $('.mobile-portfolio').hide();
+    }
+    else{
+        $('.mobile-name-card').hide();
+    }
+
+</script>
+
+<div class="container-fluid portfolio-cover" id="background-cover">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="/">OneCover</a>
+        <button class="navbar-toggler mobile-portfolio" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Jane Doe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">8422978843</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#productLink">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonialLink">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutLink">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blogsLink">Blogs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" >
+                <div class="mt-2 contact-form grey-background">
+
+                    <div class="text-center mobile-name-card pb-4">
+			            <div class="col-12">
+			            	<h3 class="text-white">Jane Doe</h3>
+			            </div>
+			            <div class="col-12">
+			                <h3 class="text-white">9054736876</h3>
+			            </div>
+                    </div>
+                    <!-- <h4 class="pt-4 pb-2 text-center">Helping you manage your money</h4> -->
+
+                    <h4 class="pt-4 pb-2 text-center">Contact us</h4>
+                    <div class="row pl-4 pr-4 text-center">
+                        <div class="col-12">
+                            <label for="firstName"></label>
+                            <input type="text" class="form-control custom-form-input" id="firstName" placeholder="Enter your phone number" value="" required="">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="lastName"></label>
+                            <input type="text" class="form-control custom-form-input" id="lastName" placeholder="Enter your Contact Details" value="" required="">
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="firstName"></label>
+                            <input type="text" class="form-control custom-form-input" id="firstName" placeholder="Product you are looking for" value="" required="">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3 text-center">
+                            <br>
+                            <button class="btn btn-primary btn-md" type="submit">Connect Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper grey-background grey-border" id="productLink">
+    <div class="container">
+    	<div class="row pl-4 pr-4">
+    	    <div class="col-md-12">
+	            <h2 class="pt-4 pb-4 text-center">Product and services</h2>	
+    	    </div>
+		    <div class="col-md-3">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <h5 class="">Health Insurance</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example.</p>
+		            <!-- </a> -->
+		        </div>
+		    </div>
+		    <div class="col-md-3">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <h5 class="">Life Insurance</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example.</p>
+		            <!-- </a> -->
+		        </div>
+		    </div>
+		    <div class="col-md-3">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <h5 class="">Car Insurance</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example.</p>
+		            <!-- </a> -->
+		        </div>
+		    </div>
+		    <div class="col-md-3">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <h5 class="">Property Insurance</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example.</p>
+		            <!-- </a> -->
+		        </div>
+		    </div>
+    	</div>
+    </div>
+</div>
+
+<div class="wrapper" id="aboutLink">
+    <div class="container">
+    	<div class="row pl-4 pr-4">
+    	    <div class="col-md-12">
+	            <h2 class="pt-4 pb-4 text-center">About us</h2>	
+    	    </div>
+		    <div class="col-md-9">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <h5 class="pt-4 pb-4">Bio and myntra</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Hey there I'am Jane Doe. I love cooking and gardening.</p>
+		            <!-- </a> -->
+		            <h5 class="pt-4 pb-4">This is me</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		        </div>
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <h5 class="pt-4 pb-4">Education Qualification</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Kendra Vidyalaya, Bangalore University.</p>
+		            <!-- </a> -->
+		        </div>
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <h5 class="pt-4 pb-4">Languages I know</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Hindi, English, Bengali</p>
+		        </div>
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <h5 class="pt-4 pb-4">Address</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Bengaluru, Banshankari, stage-2, vidyapeeta layout</p>
+		        </div>
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <h5 class="pt-4 pb-4">Reviews and Rating</h5>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						&nbsp (154 Reviews)
+                </div>
+		    </div>
+		    <div class="col-md-3">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <h5 class="pt-4 pb-4">Certification</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>XYZ certified.</p>
+		        </div>
+		    </div>
+    	</div>
+    </div>
+</div>
+
+<div class="wrapper grey-background grey-border" id="testimonialLink">
+    <div class="container">
+    	<div class="row pl-4 pr-4">
+    	    <div class="col-md-12">
+	            <h2 class="pt-4 pb-4 text-center">Client Testimonials</h2>	
+    	    </div>
+    	    <div class="col"></div>
+            <div class="col-md-8">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item">
+                            <div class="img-box"><img src="/examples/images/clients/1.jpg" alt=""></div>
+                            <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+                            <p class="overview text-center"><b>Paula Wilson</b>, Media Analyst</p>
+                        </div>
+                        <div class="item carousel-item active">
+                            <div class="img-box"><img src="/examples/images/clients/2.jpg" alt=""></div>
+                            <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+                            <p class="overview text-center"><b>Antonio Moreno</b>, Web Developer</p>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="img-box"><img src="/examples/images/clients/3.jpg" alt=""></div>
+                            <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+                            <p class="overview text-center"><b>Michael Holz</b>, Seo Analyst</p>
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+                <br><br>
+                <ol class="carousel-indicators text-left">
+                    <li data-target="#myCarousel" data-slide-to="0"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+            </div>
+            <div class="col"></div>
+    	</div>
+    </div>
+</div>
+
+<div class="wrapper" id="blogsLink">
+    <div class="container">
+    	<div class="row pl-4 pr-4">
+    	    <div class="col-md-12">
+	            <h2 class="pt-4 pb-4 text-center">Blog posts</h2>	
+    	    </div>
+    	    <div class="col-md-4">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <h5 class="pt-4 pb-4">Trick Yourself Into Creating a Fresh Start</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>There is evidence that a clean break can be a powerful way to say goodbye to old habits; research has shown that shaking up our routines and circumstances can make it easier to enact positive changes. Behavioral scientists call it the fresh start effect—but thankfully, a growing body of research also shows that it’s not limited to the start of a new year or a big life event.</p>
+		        </div>
+    	    </div>
+            <div class="col-md-4">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <h5 class="pt-4 pb-4">Face-To-Face With Cambridge Analytica’s Elusive Alexander Nix</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>The big mystery of Big Data,” said Alexander Nix, “is causation versus correlation.” He paused and looked out of the second-story window of his office. On the street below, red, double-decker buses snaked around a corner through London traffic. He lightly tapped a Swiss Army knife on his desk.</p>
+		        </div>
+            </div>
+            <div class="col-md-4">
+		        <div class="my-3 p-3 bg-white rounded shadow-sm">
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <h5 class="pt-4 pb-4">My NerdCon Stories Talk about Mental Illness and Creativity</h5>
+		            <!-- <a href="#" class="d-block mb-4 h-100"> -->
+		            <p>Lying on the floor, I try to read the book I’m supposed to review for my job at Booklist, but my brain can’t turn the scratches on a page into words. Two weeks into this, I try to quit my job. My boss tells me to go home to my parents for a couple weeks, get some help, and watch the movie Harvey. My parents get me to a psychiatrist. I start taking medication and also watch Harvey — one or both proves effective, and two weeks later I’m back at work..</p>
+		        </div>
+            </div>
+    	</div>
+    </div>
+</div>
