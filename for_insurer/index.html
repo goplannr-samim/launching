@@ -41,7 +41,6 @@
 
         </style>
 
-
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="background: #fff !important; box-shadow: -3px 5px 13px 0px rgba(90, 108, 113, 0.16);">
@@ -123,12 +122,10 @@
                     <h1 class="text-center">Need Analysis & Pitching tools</h1>
                     <br><br>
                     <ul>
-                        <li>Engage advisor with daily "top 5 things to do" that are personalized based on his needs &amp; behavior to "nudge" him right.</li>
-                        <li>Enable marketing through content which is sharable on whatsapp</li>
-                        <li>Automate lead tracking, meetings, clients to store progress</li>
-                        <li>Earnings analytics to nudge the partner based on expected sales trends</li>
-                        <li>Enable partner managers to have a top-down view of advisors across different segments</li>
-                        <li>Machine learning models for lead prioritization &amp; renewal targeting</li>
+                        <li>Based on customer segments, our sales journey recommends the right plan, cover and top 5 reasons for buying the plan that are relevant for the customer along with savings calculations.</li>
+                        <li>This new sales journey has been shown to improve conversions, ticket sizes and activation rates to help almost double the productivity.</li>
+                        <li>Interactive Question & Answer based sales journey instead of the standard sales push.</li>
+                        <li>Machine learning model keeps updating "product recommendation" based on actual customer buying behavior</li>
                     </ul>
                 </div>
             </div>
@@ -146,7 +143,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="../assets/images/analytics.png" alt="Company app snapshot." style="height: 550px !important;"><br><br>
+                    <img src="../assets/images/help.png" alt="Company app snapshot." style="height: 550px !important;"><br><br>
                 </div>
             </div>
         </div>
@@ -157,20 +154,20 @@
                 <div class="col-md-4 text-center">
                     <h1 class="text-center">Sign up now</h1>
                     <br>
-                    <form>
+                    <form class="needs-validation" id="contectForm">
                       <div class="form-group">
                         <!-- <label for="exampleInputEmail1">Email address</label> -->
-                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email id">
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email id" name="email" required="true">
                       </div>
                       <div class="form-group">
                         <!-- <label for="exampleInputEmail1">Email address</label> -->
-                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone number">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone number" name="phone_no" required="true">
                       </div>
                       <div class="form-group">
                         <!-- <label for="exampleInputPassword1">Password</label> -->
-                        <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Enter full name">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Enter full name" name="full_name" required="true">
                       </div>
-                      <button type="submit" class="btn basic-button">Register</button>
+                      <button class="btn basic-button">Register</button>
                     </form>
                 </div>
                 <div class="col-md-4"></div>
@@ -189,7 +186,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="my-3 p-3 bg-white rounded shadow-sm text-center">
-                        <img src="../assets/images/adityabirla.jpg" class="img-thumbnail" alt="Cinque Terre" style="width: 200px; /* You can set the dimensions to whatever you want */ height: 100px; object-fit: cover;">
+                        <a href="https://www.adityabirlacapital.com/"><img src="../assets/images/adityabirla.jpg" class="img-thumbnail" alt="Cinque Terre" style="width: 200px; /* You can set the dimensions to whatever you want */ height: 100px; object-fit: cover;"></a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -202,8 +199,32 @@
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+
+            $('#contectForm').on('submit', function (e) {
+
+                console.log("Hello WOrld!");
+                e.preventDefault();            
+                var contact_url = "http://api.staging.goplannr.com/v1/contact-us"
+
+                $.ajax({
+                    type: 'post',
+                    url: contact_url,
+                    data: $('#contectForm').serialize(),
+                    success: function () {
+                        alert('Thanks for contacting us.');
+                    }
+                });
+
+            });
+
+        </script>
+
     </body>
 </html>
